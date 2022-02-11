@@ -64,13 +64,13 @@ def get_response(intents_list, intents_json):
 
 print("WILLBOT3000 IS RUNNING. \n \n Ask your questions, pathetic human. ~~> :\n")
 
-while True:
-    message = input("")
-    if message == "quit" or message == "q":
-        print("You have chosen to quit. Good riddance.")
-        break
-    ints = predict_class(message)
-    res = get_response(ints, intents)
-    sleep(random.random())
-    print(res)
+# while True:
+#     message = input("")
+#     if message == "quit" or message == "q":
+#         print("You have chosen to quit. Good riddance.")
+#         break
+#     ints = predict_class(message)
+#     res = get_response(ints, intents)
+#     sleep(random.random())
+#     print(res)
     
