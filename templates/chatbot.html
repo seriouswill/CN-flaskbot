@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>Chatbot</title>
+{% endblock %}
+{% block content %}
+<body>
+    <h1>This Is The CHATBOT</h1>
+    <div id="chatbox">
+        <div id="answerbox">
+            <img src="../static/images/img1.png" alt="robto">
+            <div id="willbotsays">
+                <h3>WillBot says...</h3>
+                {% for answer in answer_list %}
+                <h1>{{ answer }}</h1>
+                {% endfor %}
+                <br><br>
+                <form role="form" method="POST" action="/chatbot">
+                    <div id="questionbox">
+                        <input type="text"
+                                name="message"
+                                id="message-box"
+                                placeholder="Enter your question here..."
+                                style="max-width: 300px;"
+                                autofocus required
+                        >
+                    </div>
+                        <button id="submit-button" type="submit" style="display: none">
+                            Submit
+                        </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

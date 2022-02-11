@@ -1,0 +1,8 @@
+chatbot_venv
+__pycache__
+training.py
+*.tar
+*.zip
+*.rar
+*.gz
+datetest.py
