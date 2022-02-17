@@ -4,6 +4,7 @@ import pickle
 import numpy as np 
 from time import sleep
 
+import pandas as pd
 
 from nltk import word_tokenize
 from nltk.stem import WordNetLemmatizer
@@ -19,6 +20,21 @@ intents = json.loads(open('./intents.json').read())
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('chatbot_model.model')
+
+# csv tester for teamBrians
+
+with open("./data/Highest Holywood Grossing Movies.csv") as file:
+    data = pd.read_csv(file)
+
+film_list = {"Title": [], "Genre": []}
+
+for x in data:
+    for i in data.Title:
+        film_list['Title'].append(i)
+    for j in data.Genre:
+        film_list['Genre'].append(j)
+
+# print(film_list['Genre'])
 
 def clean_up_sentance(sentance):
     sentance_words = word_tokenize(sentance)
@@ -55,6 +71,14 @@ def get_response(intents_list, intents_json):
         if i['tag'] == tag:
             if tag == "time":
                 result = (f"It is currently {date.strftime('%T')}, on {date.strftime('%D')}, which just happens to be a {date.strftime('%A')}") + " \n " + random.choice(i['responses'])
+                return result
+                break
+            elif tag == "codenation":
+                result = "Here is a link to our site! \n www.wearecodenation.com \n" + random.choice(i['responses'])
+                return result
+                break
+            elif tag == "courses":
+                result = "Here is a link to our site! \n https://wearecodenation.com/individual \n" + random.choice(i['responses'])
                 return result
                 break
             result = random.choice(i['responses'])

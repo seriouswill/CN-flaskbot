@@ -4,20 +4,36 @@
 {% endblock %}
 {% block content %}
 <body>
+    {% if scroll %}
+<script>
+    // document.getElementById('{{ scroll }}').scrollIntoView();
+    // or
+    document.location.hash = '#' + '{{ scroll }}';
+</script>
+{% endif %}
     <h1>This Is The CHATBOT</h1>
     <div id="chatbox">
+        <img src="../static/images/img1.png" alt="roboto" id="roboto">
         <div id="answerbox">
-            <img src="../static/images/img1.png" alt="robto">
+            
+            <h3>WillBot says...</h3>
             <div id="willbotsays">
-                <h3>WillBot says...</h3>
-                {% for answer in answer_list %}
-                <h1>{{ answer }}</h1>
+                
+                {% for item in chat_box %}
+                {% if item is in answer_list %}
+                <h1 id="answer" style="float: right; color:rgb(255, 255, 255)"> - {{ item }}</h1>
+                {% elif item is in question_list %}
+                <h1 id="question" style="float: left; color: #274E9B">{{ item }} - </h1>
+                
+                {% endif %}
                 {% endfor %}
                 <br><br>
+            </div>
                 <form role="form" method="POST" action="/chatbot">
                     <div id="questionbox">
                         <input type="text"
                                 name="message"
+                                autocomplete="off"
                                 id="message-box"
                                 placeholder="Enter your question here..."
                                 style="max-width: 300px;"
@@ -29,7 +45,7 @@
                         </button>
                 </form>
 
-            </div>
+            
         </div>
     </div>
     {% endblock %}

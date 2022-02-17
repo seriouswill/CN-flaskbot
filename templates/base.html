@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
     <div class="container">
-        <h1 class="logo">ChatBot Web App</h1>
+      <div id="logoimgsmall">
+        <img src="{{url_for('static', filename='images/short_all_white.png')}}" alt="main_folder\static\images\short_all_white.png">
+      </div>
+      <div id="logoimgbig">
+        <img src="{{url_for('static', filename='images/long_all_white.png')}}" alt="main_folder\static\images\long_all_white.png">
+      </div>
+        
         <strong><nav>
           <ul class="nav">
             <li class="nav-item"><a href="{{ url_for('home') }}" class="nav-link">Home</a></li>

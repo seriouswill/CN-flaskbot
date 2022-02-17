@@ -53,6 +53,24 @@
             ]
         },
         {
+            "tag": "courses",
+            "patterns": [
+                "what courses do you offer",
+                "what courses can I do",
+                "what different training can i do",
+                "what can I learn",
+                "I am a beginner coder",
+                "I am not good at coding",
+                "I want to learn how to code",
+                "do you do beginner courses",
+                "i want to learn programming"
+            ],
+            "responses": [
+                "Here at CodeNation we offer a wide range of courses, across multiple areas of study. We have the three week Develop course on Cyber Security, Software Development, and Data & Machine Learning. We also have the CompSci ten week course that covers Software Development, AI & Machine Learning, Extended Reality and Cyber Security.",
+                "Watch this space for more boot-camp courses on Data & Machine Learning, coming soon."
+            ]
+        },
+        {
             "tag": "goodbye",
             "patterns": [
                 "cya",
@@ -165,6 +183,40 @@
                 "The Berks are Pip the scoundrel, Sammy the daft, Patrick the rotty, and Willy the div",
                 "The berks come in many forms; thick, daft, silly, and cold.",
                 "Many prophecised the berks return. Few belivied it to be true!"
+            ]
+        },
+        {
+            "tag": "python",
+            "patterns": [
+                "What is is python?",
+                "I want to learn python?",
+                "I am a beginner python developer?",
+                "can i learn back-end?",
+                "back-end python",
+                "python programming",
+                "learn python at code Nation"
+            ],
+            "responses": [
+                "At CodeNation, we teach the python programming language on our Develop Coding course, and also at a higher level on the CompSci bootcamp",
+                "Here at CodeNation, we love python! We teach it on Develop and higher",
+                "Python Programmers unite! We teach python at multiple levels."
+            ]
+        },
+        {
+            "tag": "JavaScript",
+            "patterns": [
+                "What is is JavaScript?",
+                "I want to learn JavaScript?",
+                "I am a beginner JavaScript developer?",
+                "can i learn front-end?",
+                "front-end JavaScript",
+                "JavaScript programming",
+                "learn JavaScript at code Nation"
+            ],
+            "responses": [
+                "At CodeNation, we teach the JavaScript programming language on our Master course, and also at a higher levels on the  bootcamp",
+                "Here at CodeNation, we know JavaScript! We teach it along with React on Master: Coding",
+                "We love you front-end Devs, we've got you covered on Master: Coding."
             ]
         },
         {

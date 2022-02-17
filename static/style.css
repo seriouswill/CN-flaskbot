@@ -1,0 +1,95 @@
+@font-face {
+    font-family: GilroyBold;
+    src: url(./fonts/gilroyextrabold.otf);
+  }
+
+@font-face {
+    font-family: GilroyLight;
+    src: url(./fonts/gilroylight.otf);
+  }
+
+@media screen and (max-width: 480px) {
+    #logoimgsmall img {
+        min-width: 150px;
+        max-width: 200px;
+    }
+    /* #chatbox img {
+        display: none;
+    } */
+    #logoimgbig img {
+        display: none;
+    }
+  }
+@media screen and (min-width: 480px) {
+    #logoimgsmall img {
+        display: none;
+    }
+    #logoimgbig img {
+        min-width: 200px;
+        max-width: 500px;
+    }
+  }
+body {
+    background-color: #F5B32F;
+    border: #444444 solid 4px;
+    border-radius: 20px;
+    font-family: GilroyLight;
+    padding: 14px;
+    margin: 6px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+#willbotsays {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    flex-direction: column;
+    
+}
+h1, h3 {
+    color: #274E9B;
+    font-family: GilroyBold;
+}
+
+#roboto {
+    width: 300px;
+}
+
+#answerbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: #444444 solid 4px;
+    border-radius: 20px;
+    max-width: 800px;
+    
+    
+}
+
+#answer {
+    float: left;
+    text-align: left;
+}
+
+#question {
+    float: right;
+    text-align: right;
+}
+
+#message-box {
+    color: #274E9B;
+    background-color: #F5B32F;
+    font-family: GilroyLight;
+    
+    margin: 0 30px 30px 30px;
+    
+}
