@@ -249,6 +249,23 @@
             ]
         },
         {
+            "tag": "contact",
+            "patterns": [
+                "how do I contact codenation?",
+                "what is the phone number",
+                "what is the email?",
+                "what is codenation's phone number",
+                "phone me",
+                "contact me",
+                "how do i call you",
+                "please can i get in touch",
+                "get in touch with me"
+            ],
+            "responses": [
+                "Here are our contact details:"
+            ]
+        },
+        {
             "tag": "philosophy",
             "patterns": [
                 "give me a quote",

@@ -13,6 +13,9 @@
         min-width: 150px;
         max-width: 200px;
     }
+    h1, h3 {
+        font-size: 24px;
+    }
     /* #chatbox img {
         display: none;
     } */

@@ -77,6 +77,10 @@ def get_response(intents_list, intents_json):
                 result = "Here is a link to our site! \n www.wearecodenation.com \n" + random.choice(i['responses'])
                 return result
                 break
+            elif tag == "contact":
+                result = random.choice(i['responses']) + " hello@wearecodenation.com Tel. 0333 050 4570 "
+                return result
+                break
             elif tag == "courses":
                 result = "Here is a link to our site! \n https://wearecodenation.com/individual \n" + random.choice(i['responses'])
                 return result
