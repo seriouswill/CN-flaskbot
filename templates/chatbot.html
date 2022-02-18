@@ -22,7 +22,17 @@
                 {% for item in chat_box %}
                 {% if item is in answer_list %}
                 <h1 id="answer" style="float: right; color:rgb(255, 255, 255)"> - {{ item }}</h1>
+                {% if item == "Watch this space for more boot-camp courses on Data & Machine Learning, coming soon." or item == "Here at CodeNation we offer a wide range of courses, across multiple areas of study. We have the three week Develop course on Cyber Security, Software Development, and Data & Machine Learning. We also have the CompSci ten week course that covers Software Development, AI & Machine Learning, Extended Reality and Cyber Security."%}
+                <a href="http://wearecodenation.com"><h1 id="answer" style="float: right; color:rgb(255, 255, 255)">http://wearecodenation.com</h1></a>
+                {% endif %}
                 {% elif item is in question_list %}
+                {% if "codenation" in item %}
+                <a href="http://wearecodenation.com"><h1 id="answer" style=" color:rgb(255, 255, 255); text-shadow: #444444;">http://wearecodenation.com</h1></a>
+                {% endif %}
+                {% if "contact" in item or 'call' in item or 'touch' in item %}
+                <br>
+                <h1 id="answer" style=" color:rgb(255, 255, 255); text-shadow: #444444;"><a href="mailto:hello@wearecodenation.com">hello@wearecodenation.com</a> Tel. <a href="tel:+44333 050 4570"> 0333 050 4570</a></h1>
+                {% endif %}
                 <h1 id="question" style="float: left; color: #274E9B">{{ item }} - </h1>
                 
                 {% endif %}

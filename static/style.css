@@ -57,6 +57,7 @@ body {
     padding: 10px;
     flex-direction: column;
     
+    
 }
 h1, h3 {
     color: #274E9B;
@@ -73,7 +74,9 @@ h1, h3 {
     justify-content: space-around;
     border: #444444 solid 4px;
     border-radius: 20px;
-    max-width: 800px;
+    /* max-width: 400px; */
+    overflow:inherit;
+    position: relative;
     
     
 }

@@ -74,15 +74,15 @@ def get_response(intents_list, intents_json):
                 return result
                 break
             elif tag == "codenation":
-                result = "Here is a link to our site! \n www.wearecodenation.com \n" + random.choice(i['responses'])
+                result = random.choice(i['responses'])
                 return result
                 break
             elif tag == "contact":
-                result = random.choice(i['responses']) + " hello@wearecodenation.com Tel. 0333 050 4570 "
+                result = random.choice(i['responses']) 
                 return result
                 break
             elif tag == "courses":
-                result = "Here is a link to our site! \n https://wearecodenation.com/individual \n" + random.choice(i['responses'])
+                result = random.choice(i['responses'])
                 return result
                 break
             result = random.choice(i['responses'])
